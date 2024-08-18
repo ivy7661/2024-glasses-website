@@ -1,9 +1,29 @@
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
 // color
 .text-primary {
   color: $primary;
 }
 .text-secondary {
   color: $secondary;
+}
+
+.text-secondary-2 {
+  color: $secondary-2;
+}
+
+.text-white {
+  color: #FFFFFF;
+}
+
+.text-dark {
+  color: #000000;
 }
 
 .bg-primary {
@@ -14,8 +34,17 @@
   background: $secondary;
 }
 
+.bg-light {
+  background: $white;
+}
+
+// font
+.f-roboto {
+  font-family: "Roboto", sans-serif;
+}
+
 // font-size
-.fs-small{
+.fs-sm {
   font-size: 14px;
 }
 
@@ -66,11 +95,11 @@
   display: flex;
 }
 
-.justify-between {
+.justify-content-between {
   justify-content: space-between;
 }
 
-.justify-center {
+.justify-content-center {
   justify-content: center;
 }
 
@@ -78,8 +107,12 @@
   text-align: center;
 }
 
-.align-center {
+.align-items-center {
   align-items: center;
+}
+
+.align-items-end {
+  align-items: end;
 }
 
 .d-none {
@@ -92,6 +125,12 @@
 
 .flex-column {
   flex-direction: column;
+}
+
+@include pad {
+  .d-md-column {
+    flex-direction: column;
+  }
 }
 
 @include pad {
@@ -176,6 +215,27 @@
   }
 }
 
+// pt
+@for $i from 1 through $max {
+  .pt-#{$i} {
+    padding-top: $i * 4px;
+  }
+}
+@for $i from 1 through $max {
+  @include pad{
+    .pt-md-#{$i} {
+      padding-top: $i * 4px;
+    }
+  }
+}
+@for $i from 1 through $max {
+  @include mobile{
+    .pt-sm-#{$i} {
+      padding-top: $i * 4px;
+    }
+  }
+}
+
 // pb
 @for $i from 1 through $max {
   .pb-#{$i} {
@@ -200,6 +260,22 @@
 // margin
 .mx-auto {
   margin: 0 auto;
+}
+
+.ms-auto {
+  margin-left: auto;
+}
+
+.me-auto {
+  margin-right: auto;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.mb-auto {
+  margin-bottom: auto;
 }
 
 // ms
@@ -240,6 +316,27 @@
   @include mobile{
     .me-sm-#{$i} {
       margin-right: $i * 4px;
+    }
+  }
+}
+
+// mt
+@for $i from 1 through $max {
+  .mt-#{$i} {
+    margin-top: $i * 4px;
+  }
+}
+@for $i from 1 through $max {
+  @include pad{
+    .mt-md-#{$i} {
+      margin-top: $i * 4px;
+    }
+  }
+}
+@for $i from 1 through $max {
+  @include mobile{
+    .mt-sm-#{$i} {
+      margin-top: $i * 4px;
     }
   }
 }

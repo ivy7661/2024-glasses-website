@@ -1,4 +1,43 @@
-.header{
-  background: #69F0AE;
-  font-size: 64px;
+.header {
+  &__logo {
+    width: 80px;
+
+    @include pad {
+      padding-left: 12px;
+    }
+  }
+
+  &__item {
+    a {
+      display: block;
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+    @include mobile {     
+      width: 50%;
+      border: 1px solid white;
+    }
+  }
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav {
+  gap: 64px;
+
+  @include pad {
+    padding: 0 12px;
+  }
+
+  @include mobile {
+    padding: 0;
+    gap: 0;
+    text-align: center;
+    width: 100%;
+  }
+  
 }

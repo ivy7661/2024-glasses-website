@@ -1,5 +1,6 @@
 *, *::before, *::after {
   box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
 }
 
 a {
@@ -14,4 +15,12 @@ img {
   max-width: 100%;
   height: auto;
   vertical-align: middle;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+}
+
+p {
+  line-height: 1.5;
 }

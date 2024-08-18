@@ -19,11 +19,11 @@
 }
 
 .text-white {
-  color: #FFFFFF;
+  color: $white;
 }
 
 .text-dark {
-  color: #000000;
+  color: $dark;
 }
 
 .bg-primary {
@@ -36,6 +36,10 @@
 
 .bg-light {
   background: $white;
+}
+
+.bg-black {
+  background: $black;
 }
 
 // font
@@ -129,6 +133,12 @@
 
 @include pad {
   .d-md-column {
+    flex-direction: column;
+  }
+}
+
+@include mobile {
+  .d-sm-column {
     flex-direction: column;
   }
 }

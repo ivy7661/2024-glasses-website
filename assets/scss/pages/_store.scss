@@ -1,0 +1,66 @@
+.store {
+  &-title {
+    border-left: 8px solid #9F1213;
+    padding-left: 16px;
+    font-size: 48px;
+    font-weight: bold;
+  }
+
+  &-select {
+    width: 304px;
+    height: 38px;
+    border: 1px solid #CED4DA;
+    color: #495057;
+    padding: 6px 12px;
+    cursor: pointer;
+
+    @include mobile {
+      width: 276px;
+    }
+  }
+
+  &-card {
+    width: calc(33.33% - 18px);
+    border: 1px solid #00000020;
+
+    @include pad {
+      width: calc(50% - 12px);
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+
+    &-container {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 48px;
+      column-gap: 24px;
+
+      @include pad {
+        gap: 24px;
+      }
+    }
+
+    &__img {
+      width: 416px;
+      height: 224px;
+    }
+
+    &__title {
+      border-bottom: 1px solid #00000020;
+      padding: 8px 24px;
+    }
+
+    &__button {
+      width: 100%;
+      height: 59px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 19px;
+      background-color: #000000;
+      color: #FFFFFF;
+    }
+  }
+}

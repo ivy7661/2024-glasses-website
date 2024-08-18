@@ -1,10 +1,4 @@
 .footer {
-  height: 353px;
-
-  @include pad {
-    height: 232px;
-  }
-
   &__line {
     border: 1px solid #FFFFFF;
   }
@@ -15,6 +9,11 @@
     margin: 48px 0 0 24px;
 
     @include pad {
+      width: 40px;
+      height: 40px;
+    }
+
+    @include mobile {
       width: 24px;
       height: 24px;
       margin: 24px 0 0 8px;
